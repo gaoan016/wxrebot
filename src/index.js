@@ -45,7 +45,7 @@ function onLogout (user) {
 }
 
 
-var APIKEY = "7622a36d2015c5fca0270f0f4da61cb1";
+var APIKEY = "申请的天行API";
 
 async function onMessage (msg) {
   // console.log(msg)
@@ -153,74 +153,8 @@ async function onMessage (msg) {
               return;
         });
       }
-      
-      // room.say(res);  
     }
   }
-  // const infos = common.infos
-  // const cities = common.cities
-  // const message = msg.text().split(" ");
-  // console.log(message)
-  // var w_id = 0;
-
-  // type为7是文本消息
-
-
-  // 先对传来的信息进行分词
-  // if (message[0] === '@小马哥') {
-  //     // 继续判断
-  //   if (infos.indexOf(message[1]) > -1) {
-  //       // 找到天气id
-  //       if (cities[message[2]]) {
-  //           if (!message[2]){
-  //               await msg.say("是不是傻，不加城市名咋知道你在哪？？mdzz")
-  //               return;
-  //           }else {
-  //               w_id = cities[message[2]]
-  //               var saymsg = "";
-  //               request.post({
-  //                   url:'http://api.tianapi.com/tianqi/index',
-  //                       form:{
-  //                       key: APIKEY,
-  //                       city: w_id
-  //                   } 
-  //                   },function(err,response,body ){
-  //                       const res = JSON.parse(body)
-  //                       if (res.code === 200) {
-  //                           let info = res.newslist[0]
-  //                           saymsg = `今日${info.week}。${info.area}${info.weather}，${info.wind} ${info.windsc}<br/>` +
-  //                           `最低温度${info.lowest}，最高温度${info.highest}，当前温度${info.real}` +
-  //                           `[太阳]${info.sunrise}升起，${info.sunset}落下<br/>` +
-  //                           `[月亮]${info.moonrise}升起，${info.moondown}落下<br/>` +
-  //                           `生活小贴士：${info.tips} <br/>`;
-  //                       }else {
-  //                           saymsg = "接口不知道发生什么了，没有数据返回啊！！";
-  //                       }
-  //                       msg.say(saymsg)
-  //               });
-  //           }
-  //       }
-  //       // else {
-  //       //     await msg.say("某个大帅比太懒，还没把这个城市加上去QAQ！")
-  //       //     return;
-  //       // }
-        
-  //       if (message[1] === '晚安') {
-  //           await msg.say("明天又是充满希望的一天，晚安[月亮]")
-  //       }
-
-  //   }else {
-  //       // 如果没有匹配到
-  //       await msg.say(
-  //           getTimeState() + "<br/>" +
-  //           ' 输入天气(空格)城市名 获得天气情况  例: 天气 苏州'
-  //       )
-  //   }
-  // }
-
-  // if (message[0] === 1) {
-  //   await msg.say("hello world!")
-  // }
 }
 
 const bot = WechatyBuilder.build({
