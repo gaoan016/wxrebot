@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hot-import": "^0.2.14",
+    "node-xlsx": "^0.17.2",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.2",
+    "require": "^2.4.20",
+    "wechaty": "^1.10.4",
+    "wechaty-puppet-wechat": "^1.10.5"
+  }
+}
