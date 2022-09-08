@@ -11,12 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hot-import": "^0.2.14",
-    "node-xlsx": "^0.17.2",
     "qrcode-terminal": "^0.12.0",
     "request": "^2.88.2",
-    "require": "^2.4.20",
-    "wechaty": "^1.10.4",
-    "wechaty-puppet-wechat": "^1.10.5"
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.18.4"
   }
 }

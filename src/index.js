@@ -45,7 +45,7 @@ function onLogout (user) {
 }
 
 
-var APIKEY = "申请的天行API";
+var APIKEY = "7622a36d2015c5fca0270f0f4da61cb1";
 
 async function onMessage (msg) {
   // console.log(msg)
@@ -61,7 +61,7 @@ async function onMessage (msg) {
         // console.log(msg.room())
         console.log(msg.room().id)
         // await room.say(res);
-        if (msg.room().id === "@@518a14ed11ee6d9f68a86a9a8321cd43d25e30827ca2118bfb38155f413dea4a") {
+        if (msg.room().id === "@@eb13e80cf1c2ba339dd63b603e07701aad6d46710cd560143d857e0e6634e379") {
           // 
           roomMessageReply(msg)
           return
@@ -126,6 +126,7 @@ async function onMessage (msg) {
               if (res.code === 200) {
                   let info = res.newslist[0]
                   resdata = `${info.content}`;
+                  console.log(info)
               }else {
                 resdata = "接口不知道发生什么了，没有数据返回啊！！";
               }
@@ -143,6 +144,7 @@ async function onMessage (msg) {
           } 
           },function(err,response,body ){
               const res = JSON.parse(body)
+              console.log(res)
               if (res.code === 200) {
                   let info = res.newslist[0]
                   resdata = `${info.content}`;
@@ -158,7 +160,11 @@ async function onMessage (msg) {
 }
 
 const bot = WechatyBuilder.build({
-  name: 'ding-dong-bot',
+  name: 'wechat-puppet-wechat',
+  puppetOptions: {
+    uos: true
+  },
+  puppet: 'wechaty-puppet-wechat'
   /**
    * How to set Wechaty Puppet Provider:
    *
